@@ -2,10 +2,10 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS", "Next.js"] },
-    { category: "Backend", items: ["Node.js", "Express", "PostgreSQL", "MongoDB"] },
-    { category: "Tools", items: ["Git", "Docker", "AWS", "Firebase"] },
-    { category: "Other", items: ["Agile", "UI/UX Design", "Testing", "CI/CD"] }
+    { category: "Frontend", items: ["React", , "Next.js", "TypeScript", "Tailwind CSS"] },
+    { category: "Backend", items: ["FastAPI", "Django", "PostgreSQL", "MongoDB"] },
+    { category: "Tools", items: ["Git", "Docker", "LLM", "Prisma ORM"] },
+    { category: "Other", items: ["CI/CD", "Agile", "UI/UX Design", "Testing", ] }
   ];
 
   return (

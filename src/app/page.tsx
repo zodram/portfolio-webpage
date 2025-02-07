@@ -18,7 +18,7 @@ export default function Home() {
       </main>
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>&copy; {new Date().getFullYear()} John (Chaohui) Liu. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} John Liu. All rights reserved.</p>
         </div>
       </footer>
     </div>
