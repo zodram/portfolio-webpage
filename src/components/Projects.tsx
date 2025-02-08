@@ -105,14 +105,12 @@ const Projects = () => {
       title: "Conference Go - Conference Management System",
       description: "A web system for managing conferences.",
       images: [
-        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80"
       ],
       github: "https://gitlab.com/zodramleo/conference-go",
       demo: "",
       longDescription: "A web system for managing conferences built with React, Django, RabgbitMQ, PostgreSQL using microservice design.",
-      technologies: ["React", "Django", "RabgbitMQ", "Docker", "Bootstrap", "Insomnia", "PostgreSQL", "Python", "JavaScript"],
+      technologies: ["Django", "Docker", "Bootstrap", "RabgbitMQ", "Insomnia", "PostgreSQL", "Python", "JavaScript"],
       features: [
         "Transformed a monolithic application into a scalable and agile system by implementing a microservices architecture, resulting in a reduction in infrastructure costs and an increase in system flexibility.",
         "Implemented a message queue using RabbitMQ to establish a reliable connection with an email server, enabling automated notifications and minimizing the risk of errors in the email sending process.",
