@@ -28,6 +28,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
       </body>
     </html>
   );

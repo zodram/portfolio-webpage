@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import {
   ExternalLink,
   Github,
+  Gitlab,
   X,
   ChevronLeft,
   ChevronRight,
@@ -256,7 +257,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Github size={20} />
+                      <Gitlab size={20} />
                       Code
                     </a>
                   )}
@@ -368,7 +369,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github size={20} />
+                        <Gitlab size={20} />
                         View Source Code
                       </a>
                     )}

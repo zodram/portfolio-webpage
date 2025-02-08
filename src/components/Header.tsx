@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Gitlab } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +24,12 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a href="https://www.linkedin.com/in/19820323john-chao-liu-/" target="_blank" className="text-gray-600 hover:text-gray-900">
               <Linkedin size={20} />
+            </a>
+            <a href="https://github.com/zodram" target="_blank" className="text-gray-600 hover:text-gray-900">
+              <Github size={20} />
+            </a>
+            <a href="https://gitlab.com/zodramleo" target="_blank" className="text-gray-600 hover:text-gray-900">
+              <Gitlab size={20} />
             </a>
             <a href="mailto:jlgmp@outlook.com" className="text-gray-600 hover:text-gray-900">
               <Mail size={20} />
