@@ -5,7 +5,6 @@ import {
   ExternalLink,
   Github,
   Gitlab,
-  X,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";

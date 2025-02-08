@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Gitlab } from 'lucide-react';
+import { Menu, Github, Linkedin, Mail, Gitlab } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
