@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import Image from 'next/image'
 
 interface Project {
   title: string;
@@ -227,7 +228,7 @@ const Projects = () => {
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
               onClick={() => handleProjectClick(project)}
             >
-              <img
+              <Image
                 src={project.images[0]}
                 alt={project.title}
                 className="w-full h-48 object-cover"
@@ -282,7 +283,7 @@ const Projects = () => {
               <div className="p-6">
                 {/* Image Gallery */}
                 <div className="relative mb-6">
-                  <img
+                  <Image
                     src={selectedProject.images[currentImageIndex]}
                     alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
                     className="w-full h-[400px] object-cover rounded-lg"

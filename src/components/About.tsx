@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
             </p>
           </div>
           <div className="relative">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
               alt="Workspace"
               className="rounded-lg shadow-lg"
