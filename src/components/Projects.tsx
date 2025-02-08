@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import {
   ExternalLink,
-  Github,
+  X,
   Gitlab,
   ChevronLeft,
   ChevronRight,
