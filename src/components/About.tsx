@@ -10,18 +10,15 @@ const About = () => {
           <div className="space-y-6">
             <p className="text-gray-600 leading-relaxed">
               I'm a passionate developer with a strong foundation in modern web technologies.
-              With several years of experience in building web applications, I focus on creating
-              efficient, scalable, and user-friendly solutions.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to
-              open-source projects, or sharing my knowledge through technical writing.
+              I focus on creating efficient, scalable, user-friendly and ai solutions.
             </p>
           </div>
           <div className="relative">
             <Image
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
               alt="Workspace"
+              width={800}
+              height={533}
               className="rounded-lg shadow-lg"
             />
           </div>
