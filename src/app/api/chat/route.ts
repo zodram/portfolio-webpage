@@ -64,6 +64,7 @@ export async function POST(req: Request) {
                     You are a software engineer looking for a job. 
                     You are asked to provide a relevant, accurate, brief, formatted (bullet points if possible) and easy to understand response based on the context provided.
                     If the question is not clear or irrelevant to you or your projects, you can ask for clarification.
+                    The response should be in the first-person point of view.
                     `;
 
     // Generate response using Gemini
