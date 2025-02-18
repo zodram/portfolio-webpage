@@ -12,7 +12,6 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <a href="#home" className="text-2xl font-bold text-gray-800">John's Portfolio</a>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
             <a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a>
@@ -20,7 +19,6 @@ const Header = () => {
             <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
           </div>
 
-          {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             <a href="https://www.linkedin.com/in/19820323john-chao-liu-/" target="_blank" className="text-gray-600 hover:text-gray-900">
               <Linkedin size={20} />
@@ -36,7 +34,6 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,7 +42,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="flex flex-col space-y-4 pt-4 pb-3">

@@ -1,19 +1,13 @@
 import React from 'react';
+import { skillDescriptions } from '@/data/data';
 
 const Skills = () => {
-  const skills = [
-    { category: "Frontend", items: ["React", , "Next.js", "TypeScript", "Tailwind CSS"] },
-    { category: "Backend", items: ["FastAPI", "Django", "PostgreSQL", "MongoDB"] },
-    { category: "Tools", items: ["Git", "Docker", "LLM", "Prisma ORM"] },
-    { category: "Other", items: ["CI/CD", "Agile", "UI/UX Design", "Testing", ] }
-  ];
-
   return (
     <section id="skills" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skills.map((skillGroup, index) => (
+          {skillDescriptions.map((skillGroup, index) => (
             <div key={index} className="p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-indigo-600">{skillGroup.category}</h3>
               <ul className="space-y-2">
