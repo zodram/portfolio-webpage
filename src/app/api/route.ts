@@ -49,12 +49,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Ensure vector store is initialized
+    if (!vectorStore) {
+      return NextResponse.json(
+        { error: "Vector store not initialized" },
+        { status: 500 }
+      );
+    }
+
     // Get relevant documents from vector store
     const retriever = vectorStore.asRetriever(1);
     const retrievedDocuments = await retriever.invoke(`${message}`);
     const context = retrievedDocuments[0].pageContent;
 
-    // // Create a prompt that includes the context
+    // Create a prompt that includes the context
     const prompt = `Context: 
                     ${context}
                     \n\n
@@ -80,3 +88,9 @@ export async function POST(req: NextRequest) {
     );
   }
 }
+
+export const config = {
+  api: {
+    bodyParser: true,
+  },
+};
