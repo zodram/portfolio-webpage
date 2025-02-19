@@ -2,7 +2,7 @@ import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { TaskType } from "@google/generative-ai";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { projectDescriptions } from "@/data/data";
 
 // Initialize Gemini AI
@@ -39,7 +39,7 @@ const vectorStore = await MemoryVectorStore.fromDocuments(
   embeddings
 );
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const { message } = await req.json();
     if (!process.env.GOOGLE_API_KEY) {
