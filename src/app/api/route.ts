@@ -4,6 +4,9 @@ import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import { projectDescriptions } from "@/data/data";
+import dotenv from 'dotenv'; 
+
+dotenv.config(); 
 
 // Initialize Gemini AI
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
