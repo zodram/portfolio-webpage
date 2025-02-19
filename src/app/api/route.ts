@@ -2,7 +2,6 @@ import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
 import { TaskType } from "@google/generative-ai";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { NextRequest, NextResponse } from "next/server";
 import { projectDescriptions } from "@/data/data";
 import dotenv from 'dotenv'; 
 
@@ -42,12 +41,12 @@ const vectorStore = await MemoryVectorStore.fromDocuments(
   embeddings
 );
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
-    const { message } = await req.json();
-    console.log("Message:", message);
+    const message = await req.json();
+
     if (!process.env.GOOGLE_API_KEY) {
-      return NextResponse.json(
+      return Response.json(
         { error: "Google API key not configured" },
         { status: 500 }
       );
@@ -55,7 +54,7 @@ export async function POST(req: NextRequest) {
 
     // Ensure vector store is initialized
     if (!vectorStore) {
-      return NextResponse.json(
+      return Response.json(
         { error: "Vector store not initialized" },
         { status: 500 }
       );
@@ -83,10 +82,10 @@ export async function POST(req: NextRequest) {
     const result = await model.generateContent(prompt);
     const response = await result.response.text();
 
-    return NextResponse.json({ response });
+    return Response.json({ response });
   } catch (error) {
     console.error("Error:", error);
-    return NextResponse.json(
+    return Response.json(
       { error: "Internal server error" },
       { status: 500 }
     );

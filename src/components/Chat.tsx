@@ -32,7 +32,7 @@ const Chat = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify(input),
       });
 
       if (!response.ok) {
