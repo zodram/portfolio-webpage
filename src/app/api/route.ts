@@ -42,6 +42,7 @@ const vectorStore = await MemoryVectorStore.fromDocuments(
 export async function POST(req: NextRequest) {
   try {
     const { message } = await req.json();
+    console.log("Message:", message);
     if (!process.env.GOOGLE_API_KEY) {
       return NextResponse.json(
         { error: "Google API key not configured" },
@@ -70,9 +71,9 @@ export async function POST(req: NextRequest) {
                     ${message}
                     \n\n
                     You are a software engineer looking for a job. 
-                    You are asked to provide a relevant, accurate, brief, formatted (bullet points if possible) and easy to understand response based on the context provided.
+                    You are asked to provide a relevant, accurate, brief and easy to understand response based on the context provided.
                     If the question is not clear or irrelevant to you or your projects, you can ask for clarification.
-                    The response should be in the first-person point of view.
+                    The response should be in the first-person point of view. If possible, provide a bulleted list of key points with using "\n" as a separator.
                     `;
 
     // Generate response using Gemini
